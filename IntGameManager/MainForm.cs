@@ -25,8 +25,11 @@ namespace IntGameManager
             //SQLiteConnection cnn;
             cnn = new SQLiteConnection(connetionString);
             cnn.Open();
-            //MessageBox.Show("Connection Open  !");
-            //cnn.Close();
+            SQLiteDataAdapter dataAdapter = new SQLiteDataAdapter("SELECT * from question left join category on question.id_cat = category.id_cat", cnn);
+            DataTable dataTable = new DataTable("queston");
+            dataAdapter.Fill(dataTable);
+            
+            dataGridView1.DataSource = dataTable.AsDataView();
             questionForm = new QuestionForm(cnn);
             topicForm = new TopicForm(cnn);
         }

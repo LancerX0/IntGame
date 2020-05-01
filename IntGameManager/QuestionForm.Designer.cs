@@ -1,6 +1,6 @@
 ﻿namespace IntGameManager
 {
-    partial class Form3
+    partial class QuestionForm
     {
         /// <summary>
         /// Required designer variable.
@@ -34,11 +34,11 @@
             this.Complexity = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.Question = new System.Windows.Forms.TextBox();
             this.Answer = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.Ok = new System.Windows.Forms.Button();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // contextMenuStrip1
@@ -51,7 +51,7 @@
             // 
             this.Topic.FormattingEnabled = true;
             this.Topic.ItemHeight = 16;
-            this.Topic.Location = new System.Drawing.Point(18, 39);
+            this.Topic.Location = new System.Drawing.Point(18, 30);
             this.Topic.Name = "Topic";
             this.Topic.Size = new System.Drawing.Size(163, 20);
             this.Topic.TabIndex = 2;
@@ -61,7 +61,7 @@
             // 
             this.Complexity.FormattingEnabled = true;
             this.Complexity.ItemHeight = 16;
-            this.Complexity.Location = new System.Drawing.Point(204, 39);
+            this.Complexity.Location = new System.Drawing.Point(204, 29);
             this.Complexity.Name = "Complexity";
             this.Complexity.Size = new System.Drawing.Size(76, 20);
             this.Complexity.TabIndex = 3;
@@ -85,24 +85,20 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "Сложность";
             // 
-            // Question
-            // 
-            this.Question.Location = new System.Drawing.Point(18, 111);
-            this.Question.Name = "Question";
-            this.Question.Size = new System.Drawing.Size(646, 22);
-            this.Question.TabIndex = 7;
-            // 
             // Answer
             // 
-            this.Answer.Location = new System.Drawing.Point(18, 189);
+            this.Answer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Answer.Location = new System.Drawing.Point(18, 253);
             this.Answer.Name = "Answer";
-            this.Answer.Size = new System.Drawing.Size(646, 22);
+            this.Answer.Size = new System.Drawing.Size(472, 22);
             this.Answer.TabIndex = 8;
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(15, 158);
+            this.label3.Location = new System.Drawing.Point(15, 233);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(48, 17);
             this.label3.TabIndex = 9;
@@ -111,7 +107,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(15, 81);
+            this.label4.Location = new System.Drawing.Point(15, 63);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(56, 17);
             this.label4.TabIndex = 10;
@@ -119,23 +115,35 @@
             // 
             // Ok
             // 
-            this.Ok.Location = new System.Drawing.Point(674, 258);
+            this.Ok.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Ok.Location = new System.Drawing.Point(523, 249);
             this.Ok.Name = "Ok";
-            this.Ok.Size = new System.Drawing.Size(114, 30);
+            this.Ok.Size = new System.Drawing.Size(87, 30);
             this.Ok.TabIndex = 11;
             this.Ok.Text = "Готово";
             this.Ok.UseVisualStyleBackColor = true;
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.richTextBox1.Location = new System.Drawing.Point(15, 83);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(475, 147);
+            this.richTextBox1.TabIndex = 12;
+            this.richTextBox1.Text = "";
             // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 302);
+            this.ClientSize = new System.Drawing.Size(631, 297);
+            this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.Ok);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.Answer);
-            this.Controls.Add(this.Question);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Complexity);
@@ -154,10 +162,10 @@
         private System.Windows.Forms.ListBox Complexity;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox Question;
         private System.Windows.Forms.TextBox Answer;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button Ok;
+        private System.Windows.Forms.RichTextBox richTextBox1;
     }
 }

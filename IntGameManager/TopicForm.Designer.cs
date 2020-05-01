@@ -1,6 +1,6 @@
 ﻿namespace IntGameManager
 {
-    partial class Form2
+    partial class TopicForm
     {
         /// <summary>
         /// Required designer variable.
@@ -48,6 +48,7 @@
             this.Ok.TabIndex = 1;
             this.Ok.Text = "Готово";
             this.Ok.UseVisualStyleBackColor = true;
+            this.Ok.Click += new System.EventHandler(this.Ok_Click);
             // 
             // Form2
             // 
@@ -58,6 +59,7 @@
             this.Controls.Add(this.Topic);
             this.Name = "Form2";
             this.Text = "Добавление темы";
+            this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

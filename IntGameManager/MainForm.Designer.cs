@@ -1,6 +1,6 @@
 ﻿namespace IntGameManager
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -28,21 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.AddTopic = new System.Windows.Forms.Button();
             this.AddQuestion = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Topic = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Сomplexity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Question = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Edit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // AddTopic
             // 
-            this.AddTopic.Location = new System.Drawing.Point(32, 31);
+            this.AddTopic.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.AddTopic.Location = new System.Drawing.Point(12, 382);
             this.AddTopic.Name = "AddTopic";
-            this.AddTopic.Size = new System.Drawing.Size(136, 33);
+            this.AddTopic.Size = new System.Drawing.Size(140, 30);
             this.AddTopic.TabIndex = 0;
             this.AddTopic.Text = "Добавить тему";
             this.AddTopic.UseVisualStyleBackColor = true;
@@ -50,12 +52,14 @@
             // 
             // AddQuestion
             // 
-            this.AddQuestion.Location = new System.Drawing.Point(195, 33);
+            this.AddQuestion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.AddQuestion.Location = new System.Drawing.Point(158, 382);
             this.AddQuestion.Name = "AddQuestion";
-            this.AddQuestion.Size = new System.Drawing.Size(138, 31);
+            this.AddQuestion.Size = new System.Drawing.Size(140, 30);
             this.AddQuestion.TabIndex = 1;
             this.AddQuestion.Text = "Добавить вопрос";
             this.AddQuestion.UseVisualStyleBackColor = true;
+            this.AddQuestion.Click += new System.EventHandler(this.AddQuestion_Click);
             // 
             // dataGridView1
             // 
@@ -68,13 +72,14 @@
             this.Topic,
             this.Сomplexity,
             this.Question});
-            this.dataGridView1.Location = new System.Drawing.Point(32, 83);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(397, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(740, 364);
             this.dataGridView1.TabIndex = 2;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Topic
             // 
@@ -83,6 +88,7 @@
             this.Topic.HeaderText = "Тема";
             this.Topic.MinimumWidth = 6;
             this.Topic.Name = "Topic";
+            this.Topic.ReadOnly = true;
             // 
             // Сomplexity
             // 
@@ -90,28 +96,43 @@
             this.Сomplexity.HeaderText = "Сложность";
             this.Сomplexity.MinimumWidth = 6;
             this.Сomplexity.Name = "Сomplexity";
+            this.Сomplexity.ReadOnly = true;
             this.Сomplexity.Width = 108;
             // 
             // Question
             // 
             this.Question.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Question.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Question.DefaultCellStyle = dataGridViewCellStyle1;
             this.Question.FillWeight = 60F;
             this.Question.HeaderText = "Вопрос";
             this.Question.MinimumWidth = 6;
             this.Question.Name = "Question";
+            this.Question.ReadOnly = true;
+            // 
+            // Edit
+            // 
+            this.Edit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.Edit.Location = new System.Drawing.Point(304, 382);
+            this.Edit.Name = "Edit";
+            this.Edit.Size = new System.Drawing.Size(140, 30);
+            this.Edit.TabIndex = 3;
+            this.Edit.Text = "Редактировать";
+            this.Edit.UseVisualStyleBackColor = true;
+            this.Edit.Click += new System.EventHandler(this.Edit_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(480, 297);
+            this.ClientSize = new System.Drawing.Size(764, 424);
+            this.Controls.Add(this.Edit);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.AddQuestion);
             this.Controls.Add(this.AddTopic);
             this.Name = "Form1";
             this.Text = "Редактор вопросов";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
@@ -125,6 +146,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Topic;
         private System.Windows.Forms.DataGridViewTextBoxColumn Сomplexity;
         private System.Windows.Forms.DataGridViewTextBoxColumn Question;
+        private System.Windows.Forms.Button Edit;
     }
 }
 

@@ -5,14 +5,16 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Data.SQLite;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace IntGameManager
 {
-    public partial class Form3 : Form
+    public partial class QuestionForm : Form
     {
-        public Form3()
+        public SQLiteConnection cnn;
+        public QuestionForm(SQLiteConnection cnn)
         {
             InitializeComponent();
         }
